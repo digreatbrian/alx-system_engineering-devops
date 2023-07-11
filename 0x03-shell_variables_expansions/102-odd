@@ -1,2 +1,2 @@
 #!/bin/bash
-grep $(tail -n 1)* | less
+ls | grep $(ls | head -n 1)
