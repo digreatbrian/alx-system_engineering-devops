@@ -1,5 +1,5 @@
-##Shell ,init files ,variables and expansions  
-###Topics
+## Shell ,init files ,variables and expansions  
+### Topics
 [Expansions](http://linuxcommand.org/lc3_lts0080.php)  
 [Shell Arithmetic](https://www.gnu.org/software/bash/manual/html_node/Shell-Arithmetic.html)  
 [Variables](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html)  
