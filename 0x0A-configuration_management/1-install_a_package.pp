@@ -1,12 +1,5 @@
 # Using Puppet, install flask from pip3
-class myapp {
-  pip { 'flask':
-    version => '==2.1.0',
-    ensure => 'present',
+exec { 'install python packages':
+     command   => 'pip3 install flask==2.1.0;pip3 install Werkzeug==2.1.1',
+     path => ['/usr/bin/'],
   }
-
-  # Optional: Constrain Werkzeug version
-  pip { 'werkzeug':
-    version => '~=2.1.1',
-  }
-}
