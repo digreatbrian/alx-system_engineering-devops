@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 # Install nginx and start it
-apt-get -y install nginx
-service nginx start
-ufw allow 'Nginx HTTP'
+# Configure your Nginx server so that /redirect_me is redirecting
+# to another page.
+apt-get update -y
+apt-get install -y nginx
 
-# Set ownership of website files
-sudo chown -R $USER:$USER /var/www/html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://github.com/digreatbrian permanent;" /etc/nginx/sites-enabled/default
 
-# Configure redirection
-sed -i '37i\rewrite ^/redirect_me https://www.github.com/digreatbrian permanent;' /etc/nginx/sites-available/default
-
-# Restart nginx
-service nginx restart
+sudo service nginx restart
