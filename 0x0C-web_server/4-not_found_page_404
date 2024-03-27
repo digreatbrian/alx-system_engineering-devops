@@ -6,13 +6,13 @@ apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 
 # Create a new index.html file that will be used over the default index.nginx-debian.html
-echo "Holberton School" >> /var/www/html/index.html
+echo "" >> /var/www/html/index.html
 
 #Give the user  ownership to website files
 chown -R $USER:$USER /var/www/html
 chmod -R 755 /var/www
 
-# Redirect to /redirect_me to a youtube video
+# Redirect to /redirect_me to github
 sed -i '37i\rewrite ^/redirect_me https://www.github.com/digreatbrian permanent;' /etc/nginx/sites-available/default
 
 # Setup 404 page
