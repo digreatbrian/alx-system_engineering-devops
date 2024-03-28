@@ -5,6 +5,9 @@
 apt-get update
 apt-get install -y apache2
 
+# configure
+echo "ServerName localhost" >> /etc/apache2.conf
+
 # Create a custom index.html file
 echo "Hello Holberton" > /var/www/html/index.html
 
