@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 # run apache on the designated container
-sudo service apache2 start && echo 'apache2 is running'
+# Create a custom index.html file
+echo "Hello Holberton!" > /var/www/html/index.html
+
+# Start Apache service
+service apache2 start && 'echo apache2 is running'
