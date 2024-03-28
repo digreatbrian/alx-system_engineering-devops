@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 # run apache on the designated container
+
+# Install Apache
+apt-get update
+apt-get install -y apache2
+
 # Create a custom index.html file
-echo "Hello Holberton!" > /var/www/html/index.html
+echo "Hello Holberton" > /var/www/html/index.html
+
+# Enable Apache rewrite module
+a2enmod rewrite
 
 # Start Apache service
 service apache2 start && 'echo apache2 is running'
