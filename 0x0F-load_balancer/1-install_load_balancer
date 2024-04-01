@@ -8,11 +8,12 @@ apt-get -y install haproxy
 # edit config file
 server_config=\
 "
-frontend  digreatbrian-frontend
+frontend debrian-frontend
         bind *:80
         mode http
-        default_backend digreatbrian-backend
-backend digreatbrian-backend
+        option http-server-close
+        default_backend debrian-backend
+backend debrian-backend
         balance roundrobin
         server 474794-web-01 54.160.127.97:80 check
         server 474794-web-02 54.197.118.110:80 check
