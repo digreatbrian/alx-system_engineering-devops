@@ -1,4 +1,4 @@
-#!/usr/bin bash
+#!/usr/bin/env bash
 # this creates the database to use and a table and also
 
 # creates a table nexus6 in database tyrell_corp

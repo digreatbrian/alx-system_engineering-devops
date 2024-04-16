@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # this creates the replica user for mysql server
 
 # creating user and granting priviledges and also displaying grants
